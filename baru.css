@@ -1,0 +1,157 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body dan background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8VxOvNk0hF19uTwfs7BEJHYwuOuyDXLnd6g&s');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #2d2d2d;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(59, 117, 32, 0.95);
+  padding: 12px 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.navbar ul li a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  background-color: #6cc237;
+  color: #fff;
+}
+
+/* Tombol Logout */
+.btn-logout {
+  border: 2px solid white;
+  padding: 6px 15px;
+  font-weight: 600;
+}
+
+/* Konten utama */
+main.page-content {
+  background: rgba(255,255,255,0.9);
+  max-width: 900px;
+  margin: 30px auto 50px;
+  padding: 30px 40px;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  flex-grow: 1;
+}
+
+/* Judul */
+h1, h2, h3 {
+  margin-bottom: 15px;
+  color: #3b7520;
+  text-align: center;
+  text-shadow: 1px 1px 1px #b6d076;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Paragraf dan daftar */
+p, ul, ol {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 30px;
+}
+
+/* Tombol kembali */
+.btn-back {
+  display: inline-block;
+  background-color: #3b7520;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(108, 194, 55, 0.6);
+}
+
+.btn-back:hover {
+  background-color: #6cc237;
+  box-shadow: 0 6px 18px rgba(59, 117, 32, 0.8);
+}
+
+/* Footer */
+footer {
+  background-color: rgba(59, 117, 32, 0.95);
+  color: white;
+  text-align: center;
+  padding: 20px 15px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.3);
+  border-radius: 0 0 25px 25px;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  main.page-content {
+    margin: 20px 15px 50px;
+    padding: 25px 20px;
+  }
+}

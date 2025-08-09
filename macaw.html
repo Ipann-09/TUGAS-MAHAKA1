@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Burung Macaw - Solo Safari</title>
+  <link rel="stylesheet" href="hewan.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="home.html">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Globe_icon.svg" alt="Logo" style="height:40px;" />
+          <span>Solo Safari</span>
+        </a>
+      </div>
+      <ul>
+        <li><a href="home.html">Rumah</a></li>
+        <li><a href="macaw.html" class="active">Macaw</a></li>
+        <li><a href="crocodile.html">Buaya</a></li>
+        <li><a href="lion.html">Singa</a></li>
+        <li><button class="btn-buy" id="logoutBtn">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main style="max-width: 900px; margin: 40px auto; padding: 20px;">
+    <h1>Burung Macaw (Ara macao)</h1>
+    <img src="https://cdn.britannica.com/35/3635-050-96241EC1/Scarlet-macaw-ara-macao.jpg" alt="Burung Macaw" style="width:100%; border-radius: 16px;" />
+    <section>
+      <p><strong>Deskripsi:</strong> Macaw adalah burung berwarna cerah dari hutan hujan Amerika Tengah dan Selatan. Mereka terkenal karena kecerdasannya dan suara nyaringnya.</p>
+      <p><strong>Habitat:</strong> Hutan tropis dan subtropis Amerika Selatan.</p>
+      <p><strong>Perilaku:</strong> Sosial, sering terbang berpasangan atau dalam kelompok, dapat meniru suara manusia.</p>
+      <p><strong>Status Konservasi:</strong> Beberapa spesies dalam bahaya karena perburuan dan perdagangan ilegal.</p>
+    </section>
+    <a href="home.html" class="btn-back">← Kembali ke beranda</a>
+  </main>
+  <script>
+    document.getElementById('logoutBtn').onclick = function() {
+      localStorage.removeItem('loggedIn');
+      window.location.href = 'index.html';
+    };
+  </script>
+</body>
+</html>

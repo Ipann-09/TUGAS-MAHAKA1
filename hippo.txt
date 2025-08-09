@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kuda Nil - Solo Safari</title>
+  <link rel="stylesheet" href="hewan.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="home.html">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Globe_icon.svg" alt="Logo" style="height:40px;" />
+          <span>Solo Safari</span>
+        </a>
+      </div>
+      <ul>
+        <li><a href="home.html">Rumah</a></li>
+        <li><a href="hippo.html" class="active">Kuda Nil</a></li>
+        <li><a href="zebra.html">Zebra</a></li>
+        <li><a href="camel.html">Unta</a></li>
+        <li><button class="btn-buy" id="logoutBtn">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main style="max-width: 900px; margin: 40px auto; padding: 20px;">
+    <h1>Kuda Nil (Hippopotamus amphibius)</h1>
+    <img src="https://www.balisafarimarinepark.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-15-at-13.57.35-1200x900-cropped.jpeg" alt="Kuda Nil" style="width:100%; border-radius: 16px;" />
+    <section>
+      <p><strong>Deskripsi:</strong> Kuda nil adalah mamalia air besar yang menghabiskan waktu di sungai dan danau. Dikenal karena tubuh besar dan mulut yang kuat.</p>
+      <p><strong>Habitat:</strong> Sungai, danau, dan rawa di Afrika.</p>
+      <p><strong>Perilaku:</strong> Teritorial, aktif di malam hari, hidup berkelompok.</p>
+      <p><strong>Status Konservasi:</strong> Rentan.</p>
+    </section>
+    <a href="home.html" class="btn-back">← Kembali ke beranda</a>
+  </main>
+  <script>
+    document.getElementById('logoutBtn').onclick = function() {
+      localStorage.removeItem('loggedIn');
+      window.location.href = 'index.html';
+    };
+  </script>
+</body>
+</html>

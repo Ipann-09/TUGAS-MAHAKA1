@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gajah - Solo Safari</title>
+  <link rel="stylesheet" href="hewan.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="index.html">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Globe_icon.svg" alt="Solo Safari Logo" style="height:40px;" />
+          <span>Solo Safari</span>
+        </a>
+      </div>
+      <ul>
+        <li><a href="index.html">Rumah</a></li>
+        <li><a href="elephant.html" class="active">Gajah</a></li>
+        <li><a href="tiger.html">Harimau</a></li>
+        <li><a href="lion.html">Singa</a></li>
+        <li><button class="btn-buy" id="logoutBtn">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main style="max-width: 900px; margin: 40px auto; padding: 20px;">
+    <h1>Gajah Afrika (Loxodonta africana)</h1>
+    <img src="https://files.worldwildlife.org/wwfcmsprod/images/African_Elephant_Kenya_112367/hero_small/3v49raxlb8_WW187785.jpg" alt="Gajah" style="width:100%; border-radius: 16px;" />
+    <section>
+      <p><strong>Deskripsi:</strong> Gajah Afrika adalah mamalia darat terbesar di dunia. Mereka memiliki telinga besar, belalai kuat, dan digunakan untuk komunikasi serta aktivitas sehari-hari.</p>
+      <p><strong>Habitat:</strong> Sabana, hutan, dan gurun di Afrika.</p>
+      <p><strong>Perilaku:</strong> Gajah hidup dalam kelompok keluarga matrilineal yang dipimpin oleh betina tertua.</p>
+      <p><strong>Status Konservasi:</strong> Terancam punah.</p>
+    </section>
+    <a href="HOME.HTML" class="btn-back">← Kembali ke beranda</a>
+  </main>
+  <script>
+    document.getElementById('logoutBtn').onclick = function() {
+      localStorage.removeItem('loggedIn');
+      window.location.href = 'home.html';
+    };
+  </script>
+</body>
+</html>

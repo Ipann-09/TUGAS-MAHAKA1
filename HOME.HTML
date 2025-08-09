@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solo Safari - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="HOME.HTML">Rumah</a></li>
+        <li><a href="info-safari.html">Info Safari</a></li>
+        <li><a href="konservasi.html">Konservasi</a></li>
+        <li><a href="hal.html">Hal yang Harus Dilakukan</a></li>
+        <li><a href="penawaran.html">Penawaran Kami</a></li>
+        <li><a href="artikel.html">Artikel Kami</a></li>
+        <li><button class="btn-buy" id="logoutBtn">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="text">
+        <h1>Let's Go to <br /><span>SOLO SAFARI</span></h1>
+      </div>
+
+      <div class="animals">
+        <!-- Hewan-hewan -->
+        <a href="lion.html"><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg" alt="Singa" /></a>
+        <a href="tiger.html"><img src="https://media.istockphoto.com/id/1420676204/id/foto/potret-royal-bengal-tiger-waspada-dan-menatap-kamera-hewan-nasional-bangladesh.jpg?s=612x612&w=0&k=20&c=aTc93R8KlSqiz4gyRjksON10QPyGbyXeDpvP40wJ8Ng=" alt="Harimau" /></a>
+        <a href="gajah.html"><img src="https://files.worldwildlife.org/wwfcmsprod/images/African_Elephant_Kenya_112367/hero_small/3v49raxlb8_WW187785.jpg" alt="Gajah" /></a>
+        <a href="orangutan.html"><img src="https://www.wwf.id/sites/default/files/inline-images/10.ORANGUTAN_TENTANG%20ORANGUTAN_A.jpg" alt="Orangutan" /></a>
+        <a href="hippo.html"><img src="https://www.balisafarimarinepark.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-15-at-13.57.35-1200x900-cropped.jpeg" alt="Kuda Nil" /></a>
+        <a href="serval.html"><img src="https://tamansafari.com/taman-safari-bali/wp-content/uploads/2023/04/zyro-image-10.jpg" alt="Serval" /></a>
+        <a href="zebra.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Equus_quagga_burchellii_-_Etosha%2C_2014.jpg/1200px-Equus_quagga_burchellii_-_Etosha%2C_2014.jpg" alt="Zebra" /></a>
+        <a href="camel.html"><img src="https://tamansafari.com/taman-safari-bali/wp-content/uploads/2022/04/13_Camel-1.jpg" alt="Unta" /></a>
+        <a href="macaw.html"><img src="https://cdn.britannica.com/35/3635-050-96241EC1/Scarlet-macaw-ara-macao.jpg" alt="Burung Macaw" /></a>
+        <a href="buaya.html"><img src="https://www.balisafarimarinepark.com/wp-content/uploads/2022/10/GettyImages-123529247-2a29d6c-1200x900-cropped.jpg" alt="Buaya" /></a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p><strong>Alamat:</strong> Jl. Ir. Sutami No.109, Jebres, Surakarta</p>
+      <p><strong>Email:</strong> info@solosafari.id | <strong>Telp:</strong> +62 271 123456</p>
+      <div class="sosmed">
+        <a href="#">Instagram</a> |
+        <a href="#">Facebook</a> |
+        <a href="#">YouTube</a>
+      </div>
+      <p>&copy; 2025 Solo Safari. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Tambahkan link admin di navbar jika user admin -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = localStorage.getItem('loggedUser');
+      if(user === 'admin') {
+        const navUl = document.querySelector('.navbar ul');
+        if(navUl) {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = 'admin.html';
+          a.textContent = 'Admin Panel';
+          li.appendChild(a);
+          navUl.appendChild(li);
+        }
+      }
+    });
+  </script>
+
+  <script>
+    // Cek login
+    if (localStorage.getItem('loggedIn') !== 'true') {
+      window.location.href = 'index.html';
+    }
+
+    // Logout
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      localStorage.removeItem('loggedIn');
+      localStorage.removeItem('loggedUser');
+      window.location.href = 'index.html';
+    });
+  </script>
+
+</body>
+</html>

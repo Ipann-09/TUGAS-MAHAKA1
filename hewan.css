@@ -1,0 +1,86 @@
+.detail-animal {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.detail-animal h2 {
+  color: #3b7520;
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.detail-animal .detail-img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.detail-animal ul {
+  list-style: inside disc;
+  margin-top: 15px;
+}
+
+.navbar {
+  background-color: #3b7520;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  background-color: #b0d96d;
+  color: #3b7520;
+}
+
+.btn-buy {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  padding: 6px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-buy:hover {
+  background-color: white;
+  color: #3b7520;
+}

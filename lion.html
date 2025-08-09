@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Singa - Solo Safari</title>
+  <link rel="stylesheet" href="hewan.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="index.html" aria-label="Solo Safari Home">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Globe_icon.svg" alt="Solo Safari Logo" style="height:40px; vertical-align: middle;" />
+          <span style="color: white; font-weight: 700; font-size: 1.5rem; margin-left: 8px; vertical-align: middle;">Solo Safari</span>
+        </a>
+      </div>
+      <ul>
+        <li><a href="index.html">Rumah</a></li>
+        <li><a href="lion.html" class="active">Singa</a></li>
+        <li><a href="tiger.html">Harimau</a></li>
+        <li><a href="elephant.html">Gajah</a></li>
+        <li><button class="btn-buy" id="logoutBtn">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="max-width: 900px; margin: 40px auto; padding: 20px;">
+    <h1 style="color: #3b7520; margin-bottom: 20px;">Singa (Panthera leo)</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg" alt="Singa" style="width:100%; border-radius: 16px; box-shadow: 0 6px 16px rgba(0,0,0,0.3);" />
+    <section style="margin-top: 25px; font-size: 1.1rem; line-height: 1.6; color: #333;">
+      <p><strong>Deskripsi:</strong> Singa adalah hewan mamalia besar dari keluarga kucing besar, terkenal sebagai "raja hutan". Mereka hidup di padang rumput dan savana Afrika dan memiliki peran penting dalam ekosistem.</p>
+      <p><strong>Habitat:</strong> Savana dan padang rumput Afrika.</p>
+      <p><strong>Perilaku:</strong> Singa hidup berkelompok yang disebut kawanan dan terkenal dengan kebiasaan berburu bersama.</p>
+      <p><strong>Status Konservasi:</strong> Rentan (vulnerable) menurut IUCN.</p>
+    </section>
+      <a href="HOME.HTML" class="btn-back">← Kembali ke beranda</a>
+  </main>
+
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      localStorage.removeItem('loggedIn');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

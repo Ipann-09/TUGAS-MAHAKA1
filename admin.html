@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - Kelola User</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; }
+    h1 { color: #3b7520; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 12px; border: 1px solid #ccc; text-align: left; }
+    th { background-color: #3b7520; color: white; }
+    button.delete-btn {
+      background-color: #d9534f;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button.delete-btn:hover {
+      background-color: #c9302c;
+    }
+    button.logout-btn {
+      margin-top: 30px;
+      background-color: #3b7520;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    button.logout-btn:hover {
+      background-color: #6cc237;
+    }
+    .msg {
+      margin-top: 20px;
+      color: #d9534f;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <h1>Admin Panel - Daftar Akun Pengguna</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="userList"></tbody>
+  </table>
+
+  <button class="logout-btn" id="logoutBtn">Logout</button>
+
+  <p id="msg" class="msg"></p>
+
+  <script>
+    // Cek apakah yang login admin
+    const loggedUser = localStorage.getItem('loggedUser');
+    if (loggedUser !== 'admin') {
+      alert('Anda bukan admin! Mengalihkan ke halaman login...');
+      window.location.href = 'index.html';
+    }
+
+    const userListEl = document.getElementById('userList');
+    const msgEl = document.getElementById('msg');
+
+    // Ambil data user dari localStorage (kecuali admin)
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+
+    function renderUsers() {
+      userListEl.innerHTML = '';
+      if (users.length === 0) {
+        userListEl.innerHTML = '<tr><td colspan="2">Tidak ada user terdaftar.</td></tr>';
+        return;
+      }
+
+      users.forEach((user, index) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${user.username}</td>
+          <td><button class="delete-btn" data-index="${index}">Hapus</button></td>
+        `;
+        userListEl.appendChild(tr);
+      });
+
+      // Tambahkan event listener untuk tombol hapus
+      document.querySelectorAll('.delete-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const idx = this.getAttribute('data-index');
+          if (confirm(`Yakin ingin menghapus user "${users[idx].username}"?`)) {
+            users.splice(idx, 1);
+            localStorage.setItem('users', JSON.stringify(users));
+            renderUsers();
+            msgEl.textContent = 'User berhasil dihapus.';
+            setTimeout(() => { msgEl.textContent = ''; }, 3000);
+          }
+        });
+      });
+    }
+
+    renderUsers();
+
+    // Logout
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      localStorage.removeItem('loggedIn');
+      localStorage.removeItem('loggedUser');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

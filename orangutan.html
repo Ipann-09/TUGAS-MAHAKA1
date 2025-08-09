@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orangutan - Solo Safari</title>
+  <link rel="stylesheet" href="hewan.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="home.html">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Globe_icon.svg" alt="Logo" style="height:40px;" />
+          <span>Solo Safari</span>
+        </a>
+      </div>
+      <ul>
+        <li><a href="home.html">Rumah</a></li>
+        <li><a href="orangutan.html" class="active">Orangutan</a></li>
+        <li><a href="elephant.html">Gajah</a></li>
+        <li><a href="lion.html">Singa</a></li>
+        <li><button class="btn-buy" id="logoutBtn">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main style="max-width: 900px; margin: 40px auto; padding: 20px;">
+    <h1>Orangutan (Pongo pygmaeus)</h1>
+    <img src="https://www.wwf.id/sites/default/files/inline-images/10.ORANGUTAN_TENTANG%20ORANGUTAN_A.jpg" alt="Orangutan" style="width:100%; border-radius: 16px;" />
+    <section>
+      <p><strong>Deskripsi:</strong> Orangutan adalah kera besar yang hidup di hutan tropis Kalimantan dan Sumatera. Mereka dikenal karena kecerdasannya dan kemampuannya menggunakan alat.</p>
+      <p><strong>Habitat:</strong> Hutan hujan tropis Indonesia dan Malaysia.</p>
+      <p><strong>Perilaku:</strong> Hidup menyendiri, memanjat pohon, dan sangat protektif terhadap anaknya.</p>
+      <p><strong>Status Konservasi:</strong> Sangat terancam punah.</p>
+    </section>
+    <a href="home.html" class="btn-back">← Kembali ke beranda</a>
+  </main>
+  <script>
+    document.getElementById('logoutBtn').onclick = function() {
+      localStorage.removeItem('loggedIn');
+      window.location.href = 'index.html';
+    };
+  </script>
+</body>
+</html>

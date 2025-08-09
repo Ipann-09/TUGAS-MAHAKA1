@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unta - Solo Safari</title>
+  <link rel="stylesheet" href="hewan.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="home.html">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Globe_icon.svg" alt="Logo" style="height:40px;" />
+          <span>Solo Safari</span>
+        </a>
+      </div>
+      <ul>
+        <li><a href="home.html">Rumah</a></li>
+        <li><a href="camel.html" class="active">Unta</a></li>
+        <li><a href="zebra.html">Zebra</a></li>
+        <li><a href="hippo.html">Kuda Nil</a></li>
+        <li><button class="btn-buy" id="logoutBtn">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main style="max-width: 900px; margin: 40px auto; padding: 20px;">
+    <h1>Unta (Camelus)</h1>
+    <img src="https://tamansafari.com/taman-safari-bali/wp-content/uploads/2022/04/13_Camel-1.jpg" alt="Unta" style="width:100%; border-radius: 16px;" />
+    <section>
+      <p><strong>Deskripsi:</strong> Unta dikenal karena punuknya yang menyimpan lemak sebagai sumber energi dan air. Mereka tahan hidup di iklim gurun ekstrem.</p>
+      <p><strong>Habitat:</strong> Gurun dan padang pasir di Afrika Utara, Timur Tengah, dan Asia.</p>
+      <p><strong>Perilaku:</strong> Tahan haus lama, kuat, digunakan manusia untuk transportasi dan susu.</p>
+      <p><strong>Status Konservasi:</strong> Umumnya tidak terancam.</p>
+    </section>
+    <a href="home.html" class="btn-back">← Kembali ke beranda</a>
+  </main>
+  <script>
+    document.getElementById('logoutBtn').onclick = function() {
+      localStorage.removeItem('loggedIn');
+      window.location.href = 'index.html';
+    };
+  </script>
+</body>
+</html>

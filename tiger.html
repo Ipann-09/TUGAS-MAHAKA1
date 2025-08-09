@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harimau - Solo Safari</title>
+  <link rel="stylesheet" href="hewan.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="home.html">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Globe_icon.svg" alt="Logo" style="height:40px;" />
+          <span>Solo Safari</span>
+        </a>
+      </div>
+      <ul>
+        <li><a href="home.html">Rumah</a></li>
+        <li><a href="tiger.html" class="active">Harimau</a></li>
+        <li><a href="lion.html">Singa</a></li>
+        <li><a href="elephant.html">Gajah</a></li>
+        <li><button class="btn-buy" id="logoutBtn">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="max-width: 900px; margin: 40px auto; padding: 20px;">
+    <h1>Harimau (Panthera tigris)</h1>
+    <img src="https://media.istockphoto.com/id/1420676204/id/foto/potret-royal-bengal-tiger-waspada-dan-menatap-kamera-hewan-nasional-bangladesh.jpg?s=612x612&w=0&k=20&c=aTc93R8KlSqiz4gyRjksON10QPyGbyXeDpvP40wJ8Ng=" alt="Harimau" style="width:100%; border-radius: 16px;" />
+    <section>
+      <p><strong>Deskripsi:</strong> Harimau adalah kucing terbesar di dunia. Mereka memiliki tubuh yang kuat, bergaris-garis loreng, dan sangat teritorial. Harimau adalah predator yang sangat cakap.</p>
+      <p><strong>Habitat:</strong> Hutan hujan tropis, sabana, hingga padang rumput di Asia.</p>
+      <p><strong>Perilaku:</strong> Soliter dan aktif di malam hari (nokturnal). Mengandalkan kekuatan dan penyergapan untuk berburu.</p>
+      <p><strong>Status Konservasi:</strong> Terancam punah (Endangered) menurut IUCN. Populasi menurun akibat perburuan dan hilangnya habitat.</p>
+    </section>
+    <a href="home.html" class="btn-back">← Kembali ke beranda</a>
+  </main>
+
+  <script>
+    document.getElementById('logoutBtn').onclick = function () {
+      localStorage.removeItem('loggedIn');
+      window.location.href = 'index.html';
+    };
+  </script>
+</body>
+</html>

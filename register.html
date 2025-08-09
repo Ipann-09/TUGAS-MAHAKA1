@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registrasi Solo Safari</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Registrasi Solo Safari</h2>
+    <form id="registerForm">
+      <input type="text" id="newUsername" placeholder="Username baru" required />
+      <input type="password" id="newPassword" placeholder="Password baru" required />
+      <button type="submit">Daftar</button>
+    </form>
+    <p id="registerMsg" class="error-msg"></p>
+    <p style="margin-top: 15px;">Sudah punya akun? <a href="index.html">Login di sini</a></p>
+  </div>
+
+  <script>
+    const registerForm = document.getElementById('registerForm');
+    const registerMsg = document.getElementById('registerMsg');
+
+    registerForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = document.getElementById('newUsername').value.trim();
+      const password = document.getElementById('newPassword').value.trim();
+
+      if (!username || !password) {
+        registerMsg.textContent = 'Silakan isi semua kolom.';
+        return;
+      }
+
+      let users = JSON.parse(localStorage.getItem('users')) || [];
+
+      const existingUser = users.find(u => u.username === username);
+      if (existingUser) {
+        registerMsg.textContent = 'Username sudah terdaftar!';
+        return;
+      }
+
+      users.push({ username, password });
+      localStorage.setItem('users', JSON.stringify(users));
+
+      registerMsg.style.color = 'green';
+      registerMsg.textContent = 'Registrasi berhasil! Silakan login.';
+      setTimeout(() => window.location.href = 'index.html', 2000);
+    });
+  </script>
+</body>
+</html>
